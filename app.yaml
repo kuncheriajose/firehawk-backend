@@ -1,6 +1,8 @@
 runtime: nodejs20
 
-service: car-database-api
+# Note: First deployment must be to 'default' service
+# After initial deployment, you can uncomment the line below to create a separate service
+# service: car-database-api
 
 env_variables:
   PORT: 8080
