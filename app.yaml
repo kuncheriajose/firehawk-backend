@@ -1,0 +1,18 @@
+runtime: nodejs18
+
+service: car-database-api
+
+env_variables:
+  PORT: 8080
+  NODE_ENV: production
+
+automatic_scaling:
+  min_instances: 1
+  max_instances: 10
+  target_cpu_utilization: 0.6
+
+handlers:
+- url: /.*
+  script: auto
+  secure: always
+

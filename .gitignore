@@ -1,0 +1,12 @@
+node_modules/
+uploads/
+.env
+*.log
+coverage/
+.DS_Store
+serviceAccountKey.json
+*firebase-adminsdk*.json
+*.pem
+*.key
+firehawk-car-firebase-adminsdk*.json
+
