@@ -1,0 +1,23 @@
+steps:
+  # Install backend dependencies
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['install']
+  
+  # Run backend tests
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['test']
+  
+  # Deploy backend to App Engine
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: 
+      - 'app'
+      - 'deploy'
+      - 'app.yaml'
+      - '--quiet'
+
+options:
+  machineType: 'N1_HIGHCPU_8'
+  logging: CLOUD_LOGGING_ONLY
+
+timeout: 1200s
+
